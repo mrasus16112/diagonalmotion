@@ -1,5 +1,6 @@
 import {Game, Types} from 'phaser';
 import { LoadScene } from './scene/load';
+import { BoardScene } from './scene/board';
 
 const config: Types.Core.GameConfig = {
   title: "board",
@@ -9,8 +10,11 @@ const config: Types.Core.GameConfig = {
     height: window.innerHeight
   },
   type: Phaser.AUTO,
-  scene: [LoadScene], // add starting scene
+  scene: [LoadScene, BoardScene], // add starting scene
   autoFocus: true,
+  physics: {
+    default: 'arcade'
+  }
 };
 
 const game = new Game(config);

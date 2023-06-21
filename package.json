@@ -1,6 +1,6 @@
 {
   "name": "diagonalmotion",
-  "version": "ɑ0.0.1",
+  "version": "ɑ0.0.2",
   "description": "a game of swift diagonal motion",
   "main": "index.js",
   "scripts": {

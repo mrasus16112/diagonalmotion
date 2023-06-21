@@ -7,13 +7,13 @@ export class LoadScene extends Scene {
     preload() {
         this.load.setBaseURL('src/asset/');
         this.load.audio('valse', 'audio/valse_gymnopedie.mp3');
-        this.load.image('char', ['sprites/char1.png', 'sprites/char2.png', 'sprites/char3.png', 'sprites/char4.png', 'sprites/char5.png']);
+        this.load.spritesheet('char', 'sprites/char.png', {frameWidth: 32});
     }
     create() {
         const sound = this.sound.add('valse');
         sound.play();
-        this.char = this.add.sprite(100, 100, 'char', 1);
-
+        // .setTexture('char', n) to change texture
+        this.scene.start('board_scene');
     }
     update() {
     }
