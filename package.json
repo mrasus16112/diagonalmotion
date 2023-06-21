@@ -7,7 +7,7 @@
     "start": "webpack && node ."
   },
   "author": "marsus16112",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "phaser": "^3.60.0"
   },

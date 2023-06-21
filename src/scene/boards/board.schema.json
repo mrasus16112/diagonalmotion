@@ -1,0 +1,40 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "title": "diagonalmotion board",
+    "description": "JSON description of a diagonalmotion board.",
+    "type": "object",
+    "properties": {
+        "length": {
+            "description": "Horizontal board size",
+            "type": "integer",
+            "exclusiveMinimum": 0
+        },
+        "width": {
+            "description": "Vertical board size",
+            "type": "integer",
+            "exclusiveMinimum": 0
+        },
+        "startSquare": {
+            "description": "The location of the starting square, [x,y]. Note that the origin is top-left.",
+            "type": "array",
+            "prefixItems": [
+                {"type": "integer"},
+                {"type": "integer"}
+            ]
+        },
+        "endSquare": {
+            "description": "The location of the starting square, [x,y]. Note that the origin is top-left.",
+            "type": "array",
+            "prefixItems": [
+                {"type": "integer"},
+                {"type": "integer"}
+            ]
+        },
+        "boardData": {
+            "description": "The data that represents the board in FEN-style notation. See boards.json for examples. Use 's' to represent a square; 'l' to represent lava; 'e' to represent an enemy; 'f' to represent a flip portal; and 'u' to represent an un-flip portal.",
+            "type": "string",
+            "minLength": 1
+        }
+    },
+    "required": ["length", "width", "startSquare", "endSquare", "boardData"]
+}
